@@ -1,6 +1,5 @@
 import Container from './Container';
 import {NavLink as RouterLink} from 'react-router-dom';
-import React from 'react';
 
 
 const Header = () => {
@@ -12,12 +11,12 @@ const Header = () => {
     }
 
     return <Container>
-        <nav className="flex gap-4">
+        <nav className="header">
       
             <RouterLink className={getClassName} to="/logIn">LogIn</RouterLink>
-            <RouterLink className={getClassName} to="/viewAccount">Account Overview</RouterLink>
+            <RouterLink className={getClassName} to="/viewAccount">Account </RouterLink>
             <RouterLink className={getClassName} to="/viewCredit">Credit</RouterLink>
-            <RouterLink className={getClassName} to="/makePayment">Make A Payment</RouterLink>
+            <RouterLink className={getClassName} to="/makePayment">Payment</RouterLink>
             <RouterLink className={getClassName} to="/transferMoney">Transfers</RouterLink>
             <RouterLink className={getClassName} to="/settings">Settings</RouterLink>
 
