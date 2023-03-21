@@ -25,16 +25,68 @@
 text-decoration: underline;
 }
 
-:link:active
-{
-  text-decoration: underline;
-}
-
 body {
   background-image: linear-gradient(to right, #00b4db, #0083b0);
 
 }
 
+img.a {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+label{
+  margin-left: auto;
+margin-right: auto;
+text-align: center;
+display: block;
+}
+
+input.a{
+height: 40px;
+width: 18%;
+margin-left: auto;
+margin-right: auto;
+text-align: center;
+display: block;
+}
+
+input.b{
+  height: 40px;
+  width: 18%;
+  display: block;
+  margin-top: 2%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+input.a:focus{
+  background-color: lightblue;
+  }
+
+input.b:focus{
+background-color: lightblue;
+}
+
+button{
+  height: 40px;
+  width: 15%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-top: 3%;
+}
+
+button:hover{
+background-color: rgb(17, 255, 0);
+color: rgb(255, 255, 255);
+}
 
 
 
