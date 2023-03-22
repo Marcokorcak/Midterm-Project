@@ -7,6 +7,8 @@ import Settings from "./Pages/settings"
 import TransferMoney from "./Pages/transferMoney"
 import ViewAcc from "./Pages/viewAccount"
 import ViewCredit from "./Pages/viewCredit"
+import SavingsAccount from "./Pages/savingsAcc"
+import CheckingAccount from "./Pages/checkingAcc"
 import "./index.css"
 
 
@@ -23,6 +25,8 @@ function App() {
               <Route path="/makePayment" element={<MakePayment />}></Route>
               <Route path="/transferMoney" element={<TransferMoney />}></Route>
               <Route path="/settings" element={<Settings />}></Route>
+              <Route path="/checkingAcc" element={<CheckingAccount />}></Route>
+              <Route path="/savingsAcc" element={<SavingsAccount />}></Route>
 
           </Routes>
       </Container>  

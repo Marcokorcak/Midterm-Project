@@ -2,6 +2,8 @@ import Container from './Container';
 import {NavLink as RouterLink} from 'react-router-dom';
 
 
+
+
 const Header = () => {
  
 
@@ -12,6 +14,8 @@ const Header = () => {
 
     return <Container>
         <nav className="header">
+
+            
       
             <RouterLink className={getClassName} to="/logIn">LogIn</RouterLink>
             <RouterLink className={getClassName} to="/viewAccount">Account </RouterLink>

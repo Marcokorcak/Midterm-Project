@@ -3,10 +3,10 @@ import React from 'react';
 
 
 
-const TransferMoney = () => {
+const SavingsAccount = () => {
     return (<Container>
-        <p>Transfer page</p>
+        <p>Savings page</p>
     </Container>)
 }
 
-export default TransferMoney;
+export default SavingsAccount;
