@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 
+
 div.every{
   margin-top: 8%;  
   color: white;
@@ -22,20 +23,13 @@ div.every{
 text-decoration: underline;
 }
 
-div.card{
-  background-color: #000000;
-  width: 18%;
-}
-.card{
-  display: inline-block;
-}
 
 
 img.a {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 20%;
+  width: 30%;
   margin-top: 8%;
   margin-bottom: 5%;
 }
@@ -49,6 +43,16 @@ img.b {
   margin-bottom: 3%;
 }
 
+img.x{
+  height: 363px;
+  margin-top: 3%;
+}
+
+img.y{
+  margin-bottom: 5%;
+}
+
+
 
 label{
   margin-left: auto;
@@ -58,8 +62,8 @@ display: block;
 }
 
 input.a{
-height: 40px;
-width: 18%;
+height: 60px;
+width: 25;
 margin-left: auto;
 margin-right: auto;
 text-align: center;
@@ -68,10 +72,10 @@ color: black;
 }
 
 input.b{
-  height: 40px;
-  width: 18%;
+  height: 60px;
+  width: 29;
   display: block;
-  margin-top: 2%;
+  margin-top: 5%;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
@@ -92,16 +96,23 @@ button.x{
   height: 40px;
   width: 15%;
   text-align: center;
-  margin-top: 3%;
+  margin-top: 6%;
   color: black;
   display: block;
   margin-left: 43%;
   background-color: aliceblue;
 }
 
-button:hover{
-background-color: rgb(17, 255, 0);
+button.y{
+text-align: center;
+margin-left: auto;
+margin-right: auto;
+display: block;
 }
+
+/* button:hover{
+background-color: rgb(57, 59, 57);
+} */
 
 p.a{
   text-align: center;
@@ -141,3 +152,69 @@ html{
 .color-nav{
   background-color: #232a98;
 }
+
+.credit_input {
+  position: relative;
+  display: inline;
+
+}
+
+.credit_input:before {
+  content: '$';
+  position: absolute;
+  top: 0;
+  left: 30px;
+  font-size: 25px;
+  margin-top: -3%;
+}
+
+input.c {
+  margin: 3em;
+  padding-left: 2em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+
+}
+
+.container_card {
+  
+  background-color: rgb(148, 145, 145);
+  border-radius: 30px;
+  
+}
+
+.card_back{
+  margin-top: 100px;
+  border-radius: 30px;
+  background-color: #101357;
+
+}
+
+.container_card_log {
+  
+  background-color: #232a98;
+  border-radius: 30px;
+  width: 500px;
+  margin-left: auto;
+  height: 500px;
+  
+}
+
+.card_back_log{
+  margin-top: 100px;
+  border-radius: 30px;
+  background-color: #232a98;
+  width: 500px;
+  margin-left: 350px;
+
+
+}
+
+h1.a{
+  margin-top: 8%;
+  margin-bottom: -5%;
+
+}
+
+
+
