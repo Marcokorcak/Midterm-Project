@@ -1,5 +1,5 @@
 import Container from "../components/Container";
-import logo from "../image.png";
+import logo from "../images/logo1.png";
 import React from 'react';
 
 
@@ -7,6 +7,7 @@ const Login = () => {
     return (<Container>
 
 
+        <div className="login">
 
         <img className = 'a' src = {logo}></img>
 
@@ -14,8 +15,9 @@ const Login = () => {
       
        <input className="b" name="password" placeholder="Password" />
      
-
       <button type="submit">Log In</button>
+
+      </div>
 
     </Container>)
 }

@@ -2,9 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-.con{
+div.login{
+
 
 }
+
 
 :link {
   font-size: x-large;
@@ -34,8 +36,8 @@ img.a {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 30%;
-  margin-top: 5%;
+  width: 20%;
+  margin-top: 3%;
   margin-bottom: 5%;
 }
 

@@ -1,5 +1,5 @@
 import Container from "../components/Container";
-import user from "../user.png";
+import user from "../images/user.png";
 import React from 'react';
 
 
