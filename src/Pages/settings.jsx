@@ -7,6 +7,7 @@ import React from 'react';
 
 const Settings = () => {
     return (<Container>
+        <div className="every">
         <img className = 'b' src = {user}></img>
 
         <p className="a"> Enter what you could like to change</p>
@@ -17,9 +18,9 @@ const Settings = () => {
 
        <input className="b" name="phoneNum" placeholder="Phone Number" />
 
-       <button type="submit">Update Info</button>
+       <button className="x" type="submit">Update Info</button>
 
-
+       </div>
     </Container>)
 }
 

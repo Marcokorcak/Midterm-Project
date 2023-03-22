@@ -12,6 +12,7 @@ const ViewAcc = () => {
 
 
     return (<Container>
+        <div className="every">
 
 <p className="a"> Hello, John Doe</p>
 
@@ -22,7 +23,7 @@ const ViewAcc = () => {
 <div className="b">
 <RouterLink className={getClassName} to="/savingsAcc">Savings Account</RouterLink>
 </div>
-
+</div>
     </Container>)
 }
 

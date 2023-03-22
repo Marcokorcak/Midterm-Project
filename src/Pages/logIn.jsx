@@ -7,7 +7,7 @@ const Login = () => {
     return (<Container>
 
 
-        <div className="login">
+        
 
         <img className = 'a' src = {logo}></img>
 
@@ -15,9 +15,9 @@ const Login = () => {
       
        <input className="b" name="password" placeholder="Password" />
      
-      <button type="submit">Log In</button>
+      <button className="x" type="submit">Log In</button>
 
-      </div>
+      
 
     </Container>)
 }

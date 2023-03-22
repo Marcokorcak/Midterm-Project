@@ -2,12 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-div.login{
 
-
+div.every{
+  margin-top: 8%;
 }
-
-
 :link {
   font-size: x-large;
   font-weight: bold;
@@ -18,6 +16,7 @@ div.login{
   right: 0;
   height: 80px;  
   text-decoration: none;
+  color: #000000;
   
 }
 
@@ -25,6 +24,7 @@ div.login{
 {
 text-decoration: underline;
 }
+
 
 
 
@@ -37,7 +37,7 @@ img.a {
   margin-left: auto;
   margin-right: auto;
   width: 20%;
-  margin-top: 3%;
+  margin-top: 8%;
   margin-bottom: 5%;
 }
 
@@ -46,7 +46,7 @@ img.b {
   margin-left: auto;
   margin-right: auto;
   width: 10%;
-  margin-top: 3%;
+  margin-top: 8%;
   margin-bottom: 3%;
 }
 
@@ -87,15 +87,16 @@ input.b:focus{
 background-color: lightblue;
 }
 
-button{
+
+
+button.x{
   height: 40px;
   width: 15%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
   text-align: center;
   margin-top: 3%;
   color: black;
+  display: block;
+  margin-left: 43%;
 }
 
 button:hover{
@@ -118,6 +119,7 @@ div.a{
   width: 15%;
   margin-bottom: 3%;
   background-color: #000000;
+  
 }
 
 div.b{
@@ -130,8 +132,10 @@ div.b{
   background-color: #000000;
 }
 
-
-*{
-  color: rgb(255, 255, 255);
+div.nav{
+ font-size:x-large;
+ font-weight: bold;
 }
+
+
 
