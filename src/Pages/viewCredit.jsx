@@ -38,6 +38,7 @@ const ViewCredit = () => {
 
                             <button className="y"> Pay Now</button>
 
+
                         </div>
                     </div>
                     </div>
