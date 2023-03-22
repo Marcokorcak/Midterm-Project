@@ -20,7 +20,7 @@ const ViewAcc = () => {
 <RouterLink className={getClassName} to="/checkingAcc">Checking Account</RouterLink>
 </div>
 
-<div className="b">
+<div className="a">
 <RouterLink className={getClassName} to="/savingsAcc">Savings Account</RouterLink>
 </div>
 </div>

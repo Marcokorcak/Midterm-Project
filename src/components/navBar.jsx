@@ -6,7 +6,7 @@ function NavBar() {
   return (
     <>
     <div className='nav'>
-      <Navbar fixed="top" bg="primary" variant="dark" >
+      <Navbar className="color-nav" fixed="top" >
         <Container>
           <Nav className="me-auto">
             <Nav.Link href="/logIn">logIn</Nav.Link>

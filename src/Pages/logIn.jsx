@@ -6,9 +6,6 @@ import React from 'react';
 const Login = () => {
     return (<Container>
 
-
-        
-
         <img className = 'a' src = {logo}></img>
 
       <input className="a" name="userName" placeholder="User Name" />

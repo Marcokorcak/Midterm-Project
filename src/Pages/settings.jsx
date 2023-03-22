@@ -8,6 +8,7 @@ import React from 'react';
 const Settings = () => {
     return (<Container>
         <div className="every">
+            
         <img className = 'b' src = {user}></img>
 
         <p className="a"> Enter what you could like to change</p>

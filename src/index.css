@@ -4,20 +4,17 @@
 
 
 div.every{
-  margin-top: 8%;
+  margin-top: 8%;  
+  color: white;
 }
+
+
+
 :link {
   font-size: x-large;
   font-weight: bold;
-  margin-bottom: 2%;
   margin-left: 8%;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 80px;  
   text-decoration: none;
-  color: #000000;
-  
 }
 
 :link:hover
@@ -25,12 +22,6 @@ div.every{
 text-decoration: underline;
 }
 
-
-
-
-body {
-  background-color: #101357
-}
 
 img.a {
   display: block;
@@ -97,6 +88,7 @@ button.x{
   color: black;
   display: block;
   margin-left: 43%;
+  background-color: aliceblue;
 }
 
 button:hover{
@@ -106,7 +98,7 @@ background-color: rgb(17, 255, 0);
 p.a{
   text-align: center;
   font-size: 25px;
-  color: antiquewhite;
+  color: rgb(255, 255, 255);
   font-weight: bolder;
 }
 
@@ -116,26 +108,28 @@ div.a{
   margin-right: auto;
   border-style: solid;
   border-width: 5px;
-  width: 15%;
+  width: 19%;
   margin-bottom: 3%;
   background-color: #000000;
   
 }
 
-div.b{
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  border-style: solid;
-  border-width: 5px;
-  width: 15%;
-  background-color: #000000;
-}
 
 div.nav{
  font-size:x-large;
  font-weight: bold;
 }
 
+html{
+  background-color: #101357
 
+}
 
+#root{
+  background-color: #101357
+
+}
+
+.color-nav{
+  background-color: #232a98;
+}
