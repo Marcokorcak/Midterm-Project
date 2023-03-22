@@ -16,6 +16,9 @@ const ViewAcc = () => {
 
 <p className="a"> Hello, John Doe</p>
 
+
+
+
 <div className="a">
 <RouterLink className={getClassName} to="/checkingAcc">Checking Account</RouterLink>
 </div>

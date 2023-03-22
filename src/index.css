@@ -22,6 +22,14 @@ div.every{
 text-decoration: underline;
 }
 
+div.card{
+  background-color: #000000;
+  width: 18%;
+}
+.card{
+  display: inline-block;
+}
+
 
 img.a {
   display: block;

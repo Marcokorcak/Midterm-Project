@@ -1,6 +1,4 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom" //using this for routing 
-import Header from "./components/Header"
-import Container from "./components/Container"
 import Login from "./Pages/logIn"
 import MakePayment from "./Pages/makePayment"
 import Settings from "./Pages/settings"
