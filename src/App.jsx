@@ -5,8 +5,6 @@ import Settings from "./Pages/settings"
 import TransferMoney from "./Pages/transferMoney"
 import ViewAcc from "./Pages/viewAccount"
 import ViewCredit from "./Pages/viewCredit"
-import SavingsAccount from "./Pages/savingsAcc"
-import CheckingAccount from "./Pages/checkingAcc"
 import "./index.css"
 import NavBar from "./components/navBar"
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -31,9 +29,6 @@ function App() {
           <Route exact path="/makePayment" element={<MakePayment />} />
           <Route exact path="/transferMoney" element={<TransferMoney />} />
           <Route exact path="/settings" element={<Settings />} />
-          <Route exact path="/checkingAcc" element={<CheckingAccount />} />
-          <Route exact path="/savingsAcc" element={<SavingsAccount />} />
-
         </Routes>
       </Router>
     </div>

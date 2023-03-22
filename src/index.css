@@ -44,12 +44,12 @@ img.b {
 }
 
 img.x{
-  height: 318px;
-  margin-top: 3%;
+  height: 415px;
+  margin-top: 13%;
 }
 
 img.y{
-  margin-bottom: 5%;
+  margin-bottom: 1%;
 }
 
 
@@ -124,6 +124,7 @@ p.a{
   font-weight: bolder;
 }
 
+
 div.a{
   text-align: center;
   margin-left: auto;
@@ -164,6 +165,7 @@ html{
 
 .credit_input:before {
   content: '$';
+  color: white;
   position: absolute;
   top: 0;
   left: 30px;
@@ -176,6 +178,16 @@ input.c {
   padding-left: 2em;
   padding-top: 1em;
   padding-bottom: 1em;
+
+}
+
+input.acc {
+  margin: 3em;
+  padding-left: 2em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  border-radius: 8px;
+  height: 50px;
 
 }
 
@@ -226,6 +238,13 @@ top:73%;
 transform: translate(-50%,-50%);
 }
 
+.fill-button{
+  position:absolute;
+  left:44%;
+  top:73%;
+  transform: translate(-50%,-50%);
+  }
+
 .btn {
 border: none;
 font-family: inherit;
@@ -270,4 +289,21 @@ border-radius: 8px;
 }
 .btn:hover:after, .btn:active:after {
 width: 100%;
+}
+
+.btnAcc {
+
+  transition-duration: 0.4s;
+  margin-right: 5%;
+  background-color: white;
+  color: black;
+  border: 2px solid #101357;
+  margin-bottom: 5%;
+  padding: 12px 28px;
+  border-radius: 8px;
+}
+
+.btnAcc:hover {
+  background-color: #101357; 
+  color: white;
 }
