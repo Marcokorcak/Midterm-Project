@@ -3,7 +3,9 @@ import Container from "../components/Container";
 
 const ViewAcc = () => {
     return (<Container>
-        <p>Acc page</p>
+
+<p className="a"> Hello, John Doe</p>
+
     </Container>)
 }
 

@@ -39,6 +39,16 @@ img.a {
   margin-bottom: 5%;
 }
 
+img.b {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 10%;
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+
+
 label{
   margin-left: auto;
 margin-right: auto;
@@ -87,6 +97,14 @@ button:hover{
 background-color: rgb(17, 255, 0);
 color: rgb(255, 255, 255);
 }
+
+p.a{
+  text-align: center;
+  font-size: 25px;
+  color: antiquewhite;
+  font-weight: bolder;
+}
+
 
 
 
