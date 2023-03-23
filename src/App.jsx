@@ -1,6 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom" //using this for routing 
 import Login from "./Pages/logIn"
-import MakePayment from "./Pages/makePayment"
 import Settings from "./Pages/settings"
 import TransferMoney from "./Pages/transferMoney"
 import ViewAcc from "./Pages/viewAccount"
@@ -26,7 +25,6 @@ function App() {
           <Route exact path="/logIn" element={<Login />} />
           <Route exact path="/viewAccount" element={<ViewAcc />} />
           <Route exact path="/viewCredit" element={<ViewCredit />} />
-          <Route exact path="/makePayment" element={<MakePayment />} />
           <Route exact path="/transferMoney" element={<TransferMoney />} />
           <Route exact path="/settings" element={<Settings />} />
         </Routes>

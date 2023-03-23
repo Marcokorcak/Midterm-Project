@@ -198,12 +198,17 @@ input.acc {
   
 }
 
+
+  
+
 .card_back{
   margin-top: 100px;
   border-radius: 30px;
   background-color: #101357;
 
 }
+
+
 
 .container_card_log {
   
@@ -230,6 +235,9 @@ h1.a{
   margin-bottom: -5%;
 
 }
+
+
+
 
 .fill-button{
 position:absolute;
