@@ -9,8 +9,8 @@ const TransferMoney = () => {
     const [amtTransfer, setAmtTransfer] = useState("");
     const [checkingAccBalance, setcheckingAccBalance] = useState(1000);
     const [savingsAccBalance, setsavingsAccBalance] = useState(1000);
-    const [toAccount, setToAccount] = useState("");
-    const [select, setSelect] = useState("")
+    const [toAccount, setToAccount] = useState("checking");
+    const [select, setSelect] = useState("savings")
 
   
     const amtTransferHandler = (e) => {
@@ -75,7 +75,7 @@ const TransferMoney = () => {
                 <div class="col-lg-6 mb-4">
                    
                         <div class = "card_back">
-                        <div class="container_card">
+                        <div class="container_card_a">
 
                         <div class="card-body">
                             <div className='text-center'>

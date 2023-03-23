@@ -8,7 +8,7 @@ const Login = () => {
         <div class="col-lg-8 log">
 
             <div className=" card_back_log">
-                <div className="container_card_log">
+                <div className="container_card_log_a">
 
                     <div className="card-body">
                         <div className='text-center'>

@@ -39,11 +39,11 @@ const Settings = () => {
 
         <p className="a"> Enter what you could like to change</p>
 
-        <input className="a" name="userName" placeholder="User Name" value = {userSearch} onChange = {userSearchHandler}/>
+        <input className="set" name="userName" placeholder="User Name" value = {userSearch} onChange = {userSearchHandler}/>
       
-       <input className="b" name="email" placeholder="email" value = {passwordSearch} onChange = {passwordSearchHandler} />
+       <input className="set" name="email" placeholder="email" value = {passwordSearch} onChange = {passwordSearchHandler} />
 
-       <input className="b" name="phoneNum" placeholder="Phone Number" value = {emailSearch} onChange = { emailSearchHandler}/>
+       <input className="set" name="phoneNum" placeholder="Phone Number" value = {emailSearch} onChange = { emailSearchHandler}/>
 
        <button className="x" type="submit">Update Info</button>
 

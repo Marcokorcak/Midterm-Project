@@ -27,7 +27,7 @@ text-decoration: underline;
 
 img.a {
   display: block;
-  margin-left: auto;
+  margin-left: 20%;
   margin-right: auto;
   width: 30%;
   margin-top: 8%;
@@ -64,7 +64,7 @@ display: block;
 input.a{
 height: 60px;
 width: 25;
-margin-left: auto;
+margin-left: 19%;
 margin-right: auto;
 text-align: center;
 display: block;
@@ -74,12 +74,28 @@ color: black;
 input.b{
   height: 60px;
   width: 29;
+  margin-left: 19%;
   display: block;
   margin-top: 5%;
-  margin-left: auto;
   margin-right: auto;
   text-align: center;
   color: black;
+}
+
+input.set{
+  height: 60px;
+  width: 29;
+  margin-left: auto;
+  display: block;
+  margin-top: 5%;
+  margin-right: auto;
+  text-align: center;
+  color: black;
+}
+
+select{
+  font-weight: bold;
+  width: 20%;
 }
 
 input.a:focus{
@@ -198,6 +214,16 @@ input.acc {
   
 }
 
+.container_card_a {
+  
+  background-color: rgb(148, 145, 145);
+  border-radius: 30px;
+  margin-left: 47%;
+  width: 700px;
+  height: 430px;
+  
+}
+
 
   
 
@@ -216,6 +242,16 @@ input.acc {
   border-radius: 30px;
   width: 500px;
   margin-left: auto;
+  height: 500px;
+  
+}
+
+.container_card_log_a {
+  
+  background-color: #232a98;
+  border-radius: 30px;
+  width: 500px;
+  margin-left: 30%;
   height: 500px;
   
 }
@@ -264,13 +300,14 @@ padding: 25px 80px;
 display: inline-block;
 margin: 15px 30px;
 text-transform: uppercase;
-letter-spacing: 1px;
+letter-spacing: 3px;
 font-weight: 700;
 outline: none;
 position: relative;
 -webkit-transition: all 1s;
 -moz-transition: all 1s;
 transition: all 1s;
+margin-left: 85%;
 }
 .btn {
 border: 3px solid red;
