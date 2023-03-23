@@ -17,37 +17,68 @@ const Settings = () => {
     const userSearchHandler = (e) => {
         //function to set user's input
         setUserSearch((e.target.value));
-       
+
     };
 
     const passwordSearchHandler = (e) => {
         //function to set user's input
         setPasswordSearch((e.target.value));
-       
+
     };
 
     const emailSearchHandler = (e) => {
         //function to set user's input
         setEmailSearch((e.target.value));
-      
+
     };
 
     return (<Container>
-        <div className="every">
-            
-        <img className = 'b' src = {user}></img>
 
-        <p className="a"> Enter what you could like to change</p>
+        <div class="container">
+            <h1 className="text-light text-center m-t 40 a" >Enter what you would like to change</h1>
+            <div class="row">
+                <div class="col-lg-6 mb-4">
 
-        <input className="set" name="userName" placeholder="User Name" value = {userSearch} onChange = {userSearchHandler}/>
-      
-       <input className="set" name="email" placeholder="email" value = {passwordSearch} onChange = {passwordSearchHandler} />
+                    <div class="card_back">
+                        <div class="container_card_set">
 
-       <input className="set" name="phoneNum" placeholder="Phone Number" value = {emailSearch} onChange = { emailSearchHandler}/>
+                            <div class="card-body">
+                                <div className='text-center'>
 
-       <button className="x" type="submit">Update Info</button>
+                                    <img className='b' src={user}></img>
 
-       </div>
+                                    <p className="a"> Enter what you could like to change</p>
+
+                                    <input className="set" name="userName" placeholder="User Name" value={userSearch} onChange={userSearchHandler} />
+
+                                    <input className="set" name="email" placeholder="email" value={passwordSearch} onChange={passwordSearchHandler} />
+
+                                    <input className="set" name="phoneNum" placeholder="Phone Number" value={emailSearch} onChange={emailSearchHandler} />
+
+                                    <button className="x" type="submit">Update Info</button>
+
+
+
+
+                                </div>
+
+
+
+                            </div>
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
     </Container>)
 }
 
