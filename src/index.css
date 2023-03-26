@@ -14,12 +14,13 @@
 }
 
 img.a {
-  display: block;
-  margin-left: 20%;
-  margin-right: auto;
+ 
   width: 30%;
-  margin-top: 8%;
   margin-bottom: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
 }
 
 img.b {
@@ -55,17 +56,19 @@ input.a {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: auto;
 }
 
 input.b {
   height: 60px;
   width: 29;
-  margin-top: 5%;
   text-align: center;
   color: black;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: auto;
+  margin-top: 5%;
 }
 
 input.set {
@@ -222,6 +225,7 @@ input.acc {
   width: 500px;
   margin-left: 30%;
   height: 500px;
+  margin-top: 5%;
 }
 
 .card_back_log {
@@ -269,10 +273,7 @@ h1.a {
   -webkit-transition: all 1s;
   -moz-transition: all 1s;
   transition: all 1s;
-  margin-left: 85%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  margin: auto;
 }
 .btn {
   border: 3px solid red;

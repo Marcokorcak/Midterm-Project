@@ -6,19 +6,19 @@ const Login = () => {
   return (
     <Container>
       <div class="login">
-        <div className=" card_back_log">
+        
           <div className="container_card_log_a">
             <div className="card-body">
-              <div className="text-center">
+             
                 <img className="a" src={logo}></img>
 
                 <input className="a" name="userName" placeholder="User Name" />
 
                 <input className="b" name="password" placeholder="Password" />
-              </div>
+             
             </div>
           </div>
-        </div>
+        
 
         <div class="fill-button">
           <button class="btn">
