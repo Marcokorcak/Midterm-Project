@@ -2,14 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
-div.every{
-  margin-top: 8%;  
+div.every {
+  margin-top: 8%;
   color: white;
 }
-
-
 
 :link {
   font-size: x-large;
@@ -18,12 +14,9 @@ div.every{
   text-decoration: none;
 }
 
-:link:hover
-{
-text-decoration: underline;
+:link:hover {
+  text-decoration: underline;
 }
-
-
 
 img.a {
   display: block;
@@ -43,35 +36,33 @@ img.b {
   margin-bottom: 3%;
 }
 
-img.x{
+img.x {
   height: 415px;
   margin-top: 13%;
 }
 
-img.y{
+img.y {
   margin-bottom: 1%;
 }
 
-
-
-label{
+label {
   margin-left: auto;
-margin-right: auto;
-text-align: center;
-display: block;
+  margin-right: auto;
+  text-align: center;
+  display: block;
 }
 
-input.a{
-height: 60px;
-width: 25;
-margin-left: 19%;
-margin-right: auto;
-text-align: center;
-display: block;
-color: black;
+input.a {
+  height: 60px;
+  width: 25;
+  margin-left: 19%;
+  margin-right: auto;
+  text-align: center;
+  display: block;
+  color: black;
 }
 
-input.b{
+input.b {
   height: 60px;
   width: 29;
   margin-left: 19%;
@@ -82,7 +73,7 @@ input.b{
   color: black;
 }
 
-input.set{
+input.set {
   height: 60px;
   width: 29;
   margin-left: auto;
@@ -93,22 +84,20 @@ input.set{
   color: black;
 }
 
-select{
+select {
   font-weight: bold;
   width: 20%;
 }
 
-input.a:focus{
+input.a:focus {
   background-color: lightblue;
-  }
-
-input.b:focus{
-background-color: lightblue;
 }
 
+input.b:focus {
+  background-color: lightblue;
+}
 
-
-button.x{
+button.x {
   height: 40px;
   width: 15%;
   text-align: center;
@@ -119,29 +108,30 @@ button.x{
   background-color: aliceblue;
 }
 
-button.y{
-text-align: center;
-margin-left: auto;
-margin-right: auto;
-display: block;
-background-color: #232a98;
-color: #fff;
-border-radius: 3px;
+button.y {
+  height: 60px;
+  width: 30%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  background-color: #232a98;
+  color: #fff;
+  border-radius: 6px;
 }
 
 /* button:hover{
 background-color: rgb(57, 59, 57);
 } */
 
-p.a{
+p.a {
   text-align: center;
   font-size: 25px;
   color: rgb(255, 255, 255);
   font-weight: bolder;
 }
 
-
-div.a{
+div.a {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
@@ -150,37 +140,32 @@ div.a{
   width: 19%;
   margin-bottom: 3%;
   background-color: #000000;
-  
 }
 
-
-div.nav{
- font-size:x-large;
- font-weight: bold;
+div.nav {
+  font-size: x-large;
+  font-weight: bold;
 }
 
-html{
-  background-color: #101357
-
+html {
+  background-color: #101357;
 }
 
-#root{
-  background-color: #101357
-
+#root {
+  background-color: #101357;
 }
 
-.color-nav{
+.color-nav {
   background-color: #232a98;
 }
 
 .credit_input {
   position: relative;
   display: inline;
-
 }
 
 .credit_input:before {
-  content: '$';
+  content: "$";
   color: white;
   position: absolute;
   top: 0;
@@ -194,7 +179,6 @@ input.c {
   padding-left: 2em;
   padding-top: 1em;
   padding-bottom: 1em;
-
 }
 
 input.acc {
@@ -204,149 +188,126 @@ input.acc {
   padding-bottom: 1em;
   border-radius: 8px;
   height: 50px;
-
 }
 
 .container_card {
-  
   background-color: rgb(148, 145, 145);
   border-radius: 30px;
-  
 }
 
 .container_card_a {
-  
   background-color: rgb(148, 145, 145);
   border-radius: 30px;
   margin-left: 47%;
   width: 700px;
   height: 430px;
-  
 }
 
 .container_card_set {
-  
   background-color: rgb(148, 145, 145);
   border-radius: 30px;
   margin-left: 47%;
   width: 700px;
   height: 550px;
-  
 }
 
-  
-
-.card_back{
+.card_back {
   margin-top: 100px;
   border-radius: 30px;
   background-color: #101357;
-
 }
 
-
-
 .container_card_log {
-  
   background-color: #232a98;
   border-radius: 30px;
   width: 500px;
   margin-left: auto;
   height: 500px;
-  
 }
 
 .container_card_log_a {
-  
   background-color: #232a98;
   border-radius: 30px;
   width: 500px;
   margin-left: 30%;
   height: 500px;
-  
 }
 
-.card_back_log{
+.card_back_log {
   margin-top: 100px;
   border-radius: 30px;
   background-color: #232a98;
   width: 500px;
   margin-left: 350px;
-
-
 }
 
-h1.a{
+h1.a {
   margin-top: 8%;
   margin-bottom: -5%;
-
 }
 
-
-
-
-.fill-button{
-position:absolute;
-left:54%;
-top:73%;
-transform: translate(-50%,-50%);
+.fill-button {
+  position: absolute;
+  left: 54%;
+  top: 73%;
+  transform: translate(-50%, -50%);
 }
 
-.fill-button{
-  position:absolute;
-  left:44%;
-  top:73%;
-  transform: translate(-50%,-50%);
-  }
+.fill-button {
+  position: absolute;
+  left: 44%;
+  top: 73%;
+  transform: translate(-50%, -50%);
+}
 
 .btn {
-border: none;
-font-family: inherit;
-font-size: inherit;
-color: inherit;
-background: none;
-cursor: pointer;
-padding: 25px 80px;
-display: inline-block;
-margin: 15px 30px;
-text-transform: uppercase;
-letter-spacing: 3px;
-font-weight: 700;
-outline: none;
-position: relative;
--webkit-transition: all 1s;
--moz-transition: all 1s;
-transition: all 1s;
-margin-left: 85%;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background: none;
+  cursor: pointer;
+  padding: 25px 80px;
+  display: inline-block;
+  margin: 15px 30px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 700;
+  outline: none;
+  position: relative;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  transition: all 1s;
+  margin-left: 85%;
 }
 .btn {
-border: 3px solid red;
+  border: 3px solid red;
 }
 .btn:hover {
-color: #fff;
+  color: #fff;
 }
 .btn::after {
-content: '';
-position: absolute;
-z-index: -1;
--webkit-transition: all 1s;
--moz-transition: all 1s;
-transition: all 1s;
-
+  content: "";
+  position: absolute;
+  z-index: -1;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  transition: all 1s;
 }
 .btn:after {
-width: 0%;
-height: 100%;
-top: 0;
-left: 0;
-background: rgb(35, 21, 125);
-border-radius: 8px;
+  width: 0%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgb(35, 21, 125);
+  border-radius: 8px;
 }
-.btn:hover:after, .btn:active:after {
-width: 100%;
+.btn:hover:after,
+.btn:active:after {
+  width: 100%;
 }
 
 .btnAcc {
-
   transition-duration: 0.4s;
   margin-right: 5%;
   background-color: white;
@@ -358,6 +319,6 @@ width: 100%;
 }
 
 .btnAcc:hover {
-  background-color: #101357; 
+  background-color: #101357;
   color: white;
 }
