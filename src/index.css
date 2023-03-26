@@ -14,7 +14,6 @@
 }
 
 img.a {
- 
   width: 30%;
   margin-bottom: 5%;
   display: flex;
@@ -241,21 +240,20 @@ h1.a {
   margin-bottom: -5%;
 }
 
-.fill-button {
-  position: absolute;
-  left: 54%;
-  top: 73%;
-  transform: translate(-50%, -50%);
-}
 
 .fill-button {
-  position: absolute;
-  left: 44%;
-  top: 73%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 50%;  
+  margin-bottom: 90%;
   transform: translate(-50%, -50%);
 }
 
 .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: none;
   font-family: inherit;
   font-size: inherit;
@@ -263,7 +261,6 @@ h1.a {
   background: none;
   cursor: pointer;
   padding: 25px 80px;
-  display: inline-block;
   margin: 15px 30px;
   text-transform: uppercase;
   letter-spacing: 3px;
