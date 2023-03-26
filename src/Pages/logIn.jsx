@@ -5,7 +5,7 @@ import React from "react";
 const Login = () => {
   return (
     <Container>
-      <div class="col-lg-8 log">
+      <div class="">
         <div className=" card_back_log">
           <div className="container_card_log_a">
             <div className="card-body">
