@@ -1,21 +1,14 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom" //using this for routing 
-import Login from "./Pages/logIn"
-import Settings from "./Pages/settings"
-import TransferMoney from "./Pages/transferMoney"
-import ViewAcc from "./Pages/viewAccount"
-import ViewCredit from "./Pages/viewCredit"
-import "./index.css"
-import NavBar from "./components/navBar"
-import 'bootstrap/dist/css/bootstrap.min.css';
-
-
-
-
-
-
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; //using this for routing
+import Login from "./Pages/logIn";
+import Settings from "./Pages/settings";
+import TransferMoney from "./Pages/transferMoney";
+import ViewAcc from "./Pages/viewAccount";
+import ViewCredit from "./Pages/viewCredit";
+import "./index.css";
+import NavBar from "./components/navBar";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
-
   return (
     <div className="App">
       <NavBar />
@@ -30,13 +23,9 @@ function App() {
         </Routes>
       </Router>
     </div>
-
-
-  )
-
+  );
 }
-export default App
-
+export default App;
 
 /*   <Route path="/logIn" element={<Login />}></Route>
   <Route path="/viewAccount" element={<ViewAcc />}></Route>
