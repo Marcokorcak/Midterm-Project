@@ -2,18 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-div.login {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-div.card-body{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 :link {
   font-size: x-large;
   font-weight: bold;
