@@ -223,6 +223,7 @@ input.acc {
   width: 500px;
   margin-left: auto;
   height: 500px;
+  margin: 0 auto;
 }
 
 .container_card_log_a {
@@ -231,6 +232,7 @@ input.acc {
   width: 500px;
   margin-left: 30%;
   height: 500px;
+  margin: 0 auto;
 }
 
 .card_back_log {
@@ -239,6 +241,7 @@ input.acc {
   background-color: #232a98;
   width: 500px;
   margin-left: 350px;
+  margin: 0 auto;
 }
 
 h1.a {
