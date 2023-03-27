@@ -240,13 +240,12 @@ h1.a {
   margin-bottom: -5%;
 }
 
-
 .fill-button {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 50%;  
-  margin-bottom: 90%;
+  margin-left: 50%;
+  margin-bottom: 30%;
   transform: translate(-50%, -50%);
 }
 
@@ -271,6 +270,7 @@ h1.a {
   -moz-transition: all 1s;
   transition: all 1s;
   margin: auto;
+  margin-top: 55%;
 }
 .btn {
   border: 3px solid red;

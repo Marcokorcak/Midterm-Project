@@ -15,16 +15,18 @@ const Login = () => {
                 <input className="a" name="userName" placeholder="User Name" />
 
                 <input className="b" name="password" placeholder="Password" />
+
+                <div class="fill-button">
+          <button class="btn">
+            <p className="text-light font-weight-bold">Log In</p>
+          </button>
+        </div>
              
             </div>
           </div>
         
 
-        <div class="fill-button">
-          <button class="btn">
-            <p className="text-light font-weight-bold">Log In</p>
-          </button>
-        </div>
+        
       </div>
     </Container>
   );
