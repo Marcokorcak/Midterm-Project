@@ -6,7 +6,7 @@ import { useState } from "react";
 
 
 
-const Settings = () => {
+const Signup = () => {
 
     const [username, setUsername] = useState("");
     const [passwd, setPasswd] = useState("");
@@ -19,9 +19,9 @@ const Settings = () => {
 const body = {username, email, passwd};
       
           const response = await fetch(
-            `http://localhost:5000/accountUpdate`,
+            `http://localhost:5000/users`,
             {
-              method: "PUT",
+              method: "POST",
               headers: { "Content-Type": "application/json" },
               body: JSON.stringify(body),
             }
@@ -71,7 +71,7 @@ const body = {username, email, passwd};
     return (<Container>
 
         <div className="container">
-            <h1 className="text-light text-center m-t 40 a" >Profile Update</h1>
+            <h1 className="text-light text-center m-t 40 a" >Signup</h1>
             <div className="row">
                 <div className="col-lg-6 mb-4">
 
@@ -89,9 +89,9 @@ const body = {username, email, passwd};
 
                                     <input className="set" name="email" placeholder="email" value={email} onChange={emailHandler} />
 
-                                    <input className="set" name="password" placeholder="password" value={passwd} onChange={passwdHandler} />
+                                    <input className="set" name="password" placeholder="password" type = "password" value={passwd} onChange={passwdHandler} />
 
-                                    <button className="x" type="submit"   onClick={(e) => updateAccount(e)}>Update Info</button>
+                                    <button className="x" type="submit"   onClick={(e) => updateAccount(e)}>Create Account</button>
 
 
 
@@ -118,4 +118,4 @@ const body = {username, email, passwd};
     </Container>)
 }
 
-export default Settings;
+export default Signup;

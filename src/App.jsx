@@ -4,6 +4,7 @@ import Settings from "./Pages/settings";
 import TransferMoney from "./Pages/transferMoney";
 import ViewAcc from "./Pages/viewAccount";
 import ViewCredit from "./Pages/viewCredit";
+import Signup from "./Pages/signup";
 import "./index.css";
 import NavBar from "./components/navBar";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -16,6 +17,7 @@ function App() {
       <Router>
         <Routes>
           <Route exact path="/logIn" element={<Login />} />
+          <Route exact path="/signup" element={<Signup />} />
           <Route exact path="/viewAccount" element={<ViewAcc />} />
           <Route exact path="/viewCredit" element={<ViewCredit />} />
           <Route exact path="/transferMoney" element={<TransferMoney />} />

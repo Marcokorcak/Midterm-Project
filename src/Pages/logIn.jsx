@@ -2,10 +2,17 @@ import Container from "../components/Container";
 import logo from "../images/logo1.png";
 import React from "react";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [username, setUsername] = useState("");
   const [passwd, setPassword] = useState("");
+
+  let navigate = useNavigate();
+  const routeChange = () => {
+    let path = `/signup`;
+    navigate(path);
+  };
 
   const usernameHandler = (e) => {
     //function to set user's input
@@ -61,6 +68,7 @@ const Login = () => {
               className="b"
               name="password"
               placeholder="Password"
+              type="password"
               onChange={passwordHandler}
               value={passwd}
             />
@@ -68,6 +76,9 @@ const Login = () => {
             <div class="fill-button">
               <button class="btn" onClick={userLogin}>
                 <p className="text-light font-weight-bold">Log In</p>
+              </button>
+              <button class="btn" onClick={routeChange}>
+                <p className="text-light font-weight-bold">Sign Up</p>
               </button>
             </div>
           </div>

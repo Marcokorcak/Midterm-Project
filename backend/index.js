@@ -33,3 +33,4 @@ app.get("/accountlistsavings", db.getSavingsAccount);
 app.get("/accountlistchecking", db.getCheckingAccount);
 app.put("/accountlistadd/:id", db.incrementAccount);
 app.put("/accountlistsubtract/:id", db.decrementAccount);
+app.put("/accountUpdate", db.updateSettings);

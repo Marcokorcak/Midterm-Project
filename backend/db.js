@@ -27,7 +27,7 @@ let currentUser = 1; //placeholder variable for current user id
 const signup = async (req, res) => {
   //signup page
   try {
-    const { username, email, password } = req.body;
+    const { username, email, passwd } = req.body;
     let errors = {};
 
     const isEmailInUse = await pool.query(
@@ -39,13 +39,22 @@ const signup = async (req, res) => {
       errors.email = "Email is already in use";
     }
 
+    const isUsernameInUse = await pool.query(
+      "SELECT * FROM users WHERE username = $1", //checks if email is in use
+      [username]
+    );
+
+    if (isUsernameInUse.rows.length > 0) {
+      errors.username = "Username is already in use";
+    }
+
     if (Object.keys(errors).length > 0) {
       return res.status(400).json(errors);
     }
 
     const newUser = await pool.query(
-      "INSERT INTO users (username, email, password) VALUES ($1, $2, $3) RETURNING *", //inserts data into users table
-      [username, email, password]
+      "INSERT INTO users (username, email, passwd) VALUES ($1, $2, $3) RETURNING *", //inserts data into users table
+      [username, email, passwd]
     );
 
     res.json({ sucess: true, data: newUser.rows[0] });
@@ -259,6 +268,24 @@ const decrementAccount = async (req, res) => {
   }
 };
 
+const updateSettings = async (req, res) => {
+  try {
+    const { username, email, passwd } = req.body;
+
+
+   
+      await pool.query(
+        "UPDATE users SET username = $1, email = $2, passwd = $3 WHERE user_id = $4",
+        [username, email, passwd, currentUser]
+      );
+
+      res.status(200).json({ success: true });
+    
+  } catch (err) {
+    console.error(err.message);
+  }
+};
+
 module.exports = {
   signup,
   login,
@@ -268,5 +295,6 @@ module.exports = {
   getSavingsAccount,
   incrementAccount,
   decrementAccount,
+  updateSettings,
   pool,
 }; //export all modules
