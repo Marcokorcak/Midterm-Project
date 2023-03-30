@@ -88,7 +88,7 @@ const login = async (req, res) => {
 //Account functions//
 const randNumRouting = Math.floor(100000 + Math.random() * 900000);
 
- //CONNECTED WITH JOINT
+//CONNECTED WITH JOINT
 const addCheckingAccount = async (req, res) => {
   try {
     //1 is checking account, 2 is savings
@@ -144,11 +144,10 @@ const addSavingsAccount = async (req, res) => {
 };
 const getCheckingAccount = async (req, res) => {
   try {
-
     const getJointAccount = await pool.query(
       "SELECT account_id_FK FROM joint WHERE user_id_FK = $1",
       [currentUser]
-    ); 
+    );
 
     let jointAccountLength = getJointAccount.rows.length;
 
@@ -165,27 +164,25 @@ const getCheckingAccount = async (req, res) => {
     console.log(arrString);
 
     const getAllUserAccount = await pool.query(
-      "SELECT * FROM account WHERE type_account = 1 AND account_id IN (" + arrString + ") "
+      "SELECT * FROM account WHERE type_account = 1 AND account_id IN (" +
+        arrString +
+        ") "
+    );
 
-    ); 
-    
-    
     res.json(getAllUserAccount.rows);
     console.log(array);
     console.log(array2);
-  }
-  catch (err) {
+  } catch (err) {
     console.error(err.message);
   }
 };
 
 const getSavingsAccount = async (req, res) => {
-   try {
-
+  try {
     const getJointAccount = await pool.query(
       "SELECT account_id_FK FROM joint WHERE user_id_FK = $1",
       [currentUser]
-    ); 
+    );
 
     let jointAccountLength = getJointAccount.rows.length;
 
@@ -201,21 +198,18 @@ const getSavingsAccount = async (req, res) => {
     console.log(arrString);
 
     const getAllUserAccount = await pool.query(
-      "SELECT * FROM account WHERE type_account = 2 AND account_id IN (" + arrString + ") "
+      "SELECT * FROM account WHERE type_account = 2 AND account_id IN (" +
+        arrString +
+        ") "
+    );
 
-    ); 
-    
-    
     res.json(getAllUserAccount.rows);
     console.log(array);
     console.log(array2);
-  }
-  catch (err) {
+  } catch (err) {
     console.error(err.message);
   }
 };
-
-
 
 const incrementAccount = async (req, res) => {
   try {
@@ -230,12 +224,40 @@ const incrementAccount = async (req, res) => {
       [id]
     );
     res.json(account.rows[0]);
-  
   } catch (err) {
     console.error(err.message);
   }
 };
 
+const decrementAccount = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { balance } = req.body;
+
+    const account = await pool.query(
+      "SELECT * FROM account WHERE account_id = $1",
+      [id]
+    );
+
+    const newBal = account.rows[0].balance - balance;
+
+    if (newBal < 0) {
+      return res.status(401).json({
+        error: {
+          message: "You do not Have Sufficient Funds for this Withdrawal.", //checks if password is incorrect and prints message
+        },
+      });
+    } else {
+      await pool.query(
+        "UPDATE account SET balance = (balance - $1) WHERE account_id = $2",
+        [balance, id]
+      );
+    }
+    res.json(account.rows[0]);
+  } catch (err) {
+    console.error(err.message);
+  }
+};
 
 module.exports = {
   signup,
@@ -245,5 +267,6 @@ module.exports = {
   getCheckingAccount,
   getSavingsAccount,
   incrementAccount,
-  pool
+  decrementAccount,
+  pool,
 }; //export all modules
