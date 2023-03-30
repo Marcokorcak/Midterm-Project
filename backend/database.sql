@@ -11,7 +11,8 @@ CREATE TABLE account(
     account_id SERIAL PRIMARY KEY,
     balance FLOAT NOT NULL,
     account_number INT UNIQUE,
-    routing_number INT UNIQUE
+    routing_number INT UNIQUE,
+    type_account INT NOT NULL
 );
 
 CREATE TABLE credit_card(
@@ -27,3 +28,4 @@ CREATE TABLE joint(
     account_id_FK INT REFERENCES account(account_id),
     credit_card_id_FK INT REFERENCES credit_card(credit_card_id)
 );
+
