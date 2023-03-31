@@ -31,6 +31,9 @@ app.post("/login", db.login);
 
 app.get("/accountlistsavings", db.getSavingsAccount);
 app.get("/accountlistchecking", db.getCheckingAccount);
+app.get("/creditcard1", db.getCreditCard1);
+app.get("/creditcard2", db.getCreditCard2);
 app.put("/accountlistadd/:id", db.incrementAccount);
 app.put("/accountlistsubtract/:id", db.decrementAccount);
+app.put("/creditcardsubtract/:id", db.decrementCreditCard);
 app.put("/accountUpdate", db.updateSettings);

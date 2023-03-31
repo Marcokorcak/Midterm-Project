@@ -12,13 +12,14 @@ CREATE TABLE account(
     balance FLOAT NOT NULL,
     account_number INT UNIQUE,
     routing_number INT UNIQUE,
-    type_account INT NOT NULL
+    type_account INT
 );
 
 CREATE TABLE credit_card(
     credit_card_id SERIAL PRIMARY KEY,
     credit_card_num INT NOT NULL UNIQUE,
-    debt FLOAT NOT NULL
+    debt FLOAT NOT NULL,
+    type_credit_card INT NOT NULL
 );
 
 

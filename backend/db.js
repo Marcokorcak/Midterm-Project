@@ -20,7 +20,7 @@ const pool = new Pool({
 //    Database: "de3i1qjcqnaunj"
 //  });
 
-let currentUser = 1; //placeholder variable for current user id
+//let currentUser = 38; //placeholder variable for current user id
 
 //users table functions//
 //create a user
@@ -52,10 +52,86 @@ const signup = async (req, res) => {
       return res.status(400).json(errors);
     }
 
-    const newUser = await pool.query(
+    const newUserSignup= await pool.query(
       "INSERT INTO users (username, email, passwd) VALUES ($1, $2, $3) RETURNING *", //inserts data into users table
       [username, email, passwd]
     );
+
+    //1 is checking account, 2 is savings
+    const randNumAccountSavings = Math.floor(100000 + Math.random() * 900000);
+    const randNumRoutingSavings = Math.floor(100000 + Math.random() * 900000);
+
+    const randNumAccountChecking = Math.floor(100000 + Math.random() * 900000);
+    const randNumRoutingChecking= Math.floor(100000 + Math.random() * 900000);
+
+    const randNumCreditCard1 = Math.floor(100000 + Math.random() * 900000);
+    const randNumCreditCard2 = Math.floor(100000 + Math.random() * 900000);
+
+
+    const balance = 1000;
+    const debt1 = 100;
+    const debt2 = 300;
+
+    const credit_card_1 = 1;
+    const credit_card_2 = 2;
+
+
+
+    const account_number_savings = randNumAccountSavings;
+    const routing_number_savings = randNumRoutingSavings;
+    const type_account_savings = 2;
+
+
+    const account_number_checking = randNumAccountChecking;
+    const routing_number_checking = randNumRoutingChecking;
+    const type_account_checking = 1;
+
+    const newUser = await pool.query("SELECT COUNT(*) FROM users");
+    const nextUser = newUser.rows[0].count;
+
+    console.log(newUser);
+
+   
+    const newSavingsAccount = await pool.query(
+      "INSERT INTO account (balance, account_number, routing_number, type_account) VALUES($1, $2, $3, $4) RETURNING *",
+      [balance, account_number_savings, routing_number_savings, type_account_savings]
+    );
+
+    // const newJointSavingsAccount = await pool.query(
+    //   "INSERT INTO joint (user_id_FK, account_id_FK) VALUES ($1, $2)",
+    //   [nextUser, newSavingsAccount.rows[0].account_id]
+    // );
+
+    const newCheckingAccount = await pool.query(
+      "INSERT INTO account (balance, account_number, routing_number, type_account) VALUES($1, $2, $3, $4) RETURNING *",
+      [balance, account_number_checking, routing_number_checking, type_account_checking]
+    );
+
+    // const newJointCheckingAccount = await pool.query(
+    //   "INSERT INTO joint (user_id_FK, account_id_FK) VALUES ($1, $2)",
+    //   [nextUser, newCheckingAccount.rows[0].account_id]
+    // );
+
+    const newCreditCard1 = await pool.query(
+      "INSERT INTO credit_card (debt, credit_card_num, type_credit_card) VALUES($1, $2, $3) RETURNING *",
+      [debt1, randNumCreditCard1, credit_card_1]
+    );
+
+    const newJointCreditCard1 = await pool.query(
+      "INSERT INTO joint (user_id_FK, account_id_FK, credit_card_id_FK) VALUES ($1, $2, $3)",
+      [nextUser,newCheckingAccount.rows[0].account_id, newCreditCard1.rows[0].credit_card_id]
+    );
+
+    const newCreditCard2 = await pool.query(
+      "INSERT INTO credit_card (debt, credit_card_num, type_credit_card) VALUES($1, $2, $3) RETURNING *",
+      [debt2, randNumCreditCard2, credit_card_2]
+    );
+
+    const newJointCreditCard2 = await pool.query(
+      "INSERT INTO joint (user_id_FK, account_id_FK, credit_card_id_FK) VALUES ($1, $2, $3)",
+      [nextUser, newSavingsAccount.rows[0].account_id,newCreditCard2.rows[0].credit_card_id]
+    );
+   // res.status(200).json({ success: true });
 
     res.json({ sucess: true, data: newUser.rows[0] });
   } catch (err) {
@@ -95,62 +171,9 @@ const login = async (req, res) => {
 };
 
 //Account functions//
-const randNumRouting = Math.floor(100000 + Math.random() * 900000);
 
 //CONNECTED WITH JOINT
-const addCheckingAccount = async (req, res) => {
-  try {
-    //1 is checking account, 2 is savings
-    const randNumAccount = Math.floor(100000 + Math.random() * 900000);
 
-    const balance = 1000;
-    const account_number = randNumAccount;
-    const routing_number = randNumRouting;
-    const type_account = 1;
-
-    const newCheckingAccount = await pool.query(
-      "INSERT INTO account (balance, account_number, routing_number, type_account) VALUES($1, $2, $3, $4) RETURNING *",
-      [balance, account_number, routing_number, type_account]
-    );
-
-    const newJointAccount = await pool.query(
-      "INSERT INTO joint (user_id_FK, account_id_FK) VALUES ($1, $2)",
-      [currentUser, account.rows[0].account_id]
-    );
-
-    console.log(currentUser);
-    res.json(newrows[0]);
-  } catch (err) {
-    console.error(err.message);
-  }
-};
-
-const addSavingsAccount = async (req, res) => {
-  try {
-    //1 is checking account, 2 is savings
-    const randNumAccount = Math.floor(100000 + Math.random() * 900000);
-
-    const balance = 100;
-    const account_number = randNumAccount;
-    const routing_number = randNumRouting;
-    const type_account = 2;
-
-    const newCheckingAccount = await pool.query(
-      "INSERT INTO account (balance, account_number, routing_number, type_account) VALUES($1, $2, $3, $4) RETURNING *",
-      [balance, account_number, routing_number, type_account]
-    );
-
-    const newJointAccount = await pool.query(
-      "INSERT INTO joint (user_id_FK, account_id_FK) VALUES ($1, $2)",
-      [currentUser, account.rows[0].account_id]
-    );
-
-    console.log(currentUser);
-    res.json(newrows[0]);
-  } catch (err) {
-    console.error(err.message);
-  }
-};
 const getCheckingAccount = async (req, res) => {
   try {
     const getJointAccount = await pool.query(
@@ -220,6 +243,9 @@ const getSavingsAccount = async (req, res) => {
   }
 };
 
+
+
+
 const incrementAccount = async (req, res) => {
   try {
     const { id } = req.params;
@@ -268,12 +294,110 @@ const decrementAccount = async (req, res) => {
   }
 };
 
+
+const getCreditCard1 = async (req, res) => {
+  try {
+    const getJointAccount = await pool.query(
+      "SELECT credit_card_id_FK FROM joint WHERE user_id_FK = $1",
+      [currentUser]
+    );
+
+    let jointAccountLength = getJointAccount.rows.length;
+
+    let array = [];
+    let array2 = [];
+
+    for (let i = 0; i < jointAccountLength; i++) {
+      array[i] = getJointAccount.rows[i].credit_card_id_fk;
+    }
+
+    let arrString = array.toString();
+
+    console.log(arrString);
+
+    const getAllUserAccount = await pool.query(
+      "SELECT * FROM credit_card WHERE type_credit_card = 1 AND credit_card_id IN (" +
+        arrString +
+        ") "
+    );
+
+    res.json(getAllUserAccount.rows);
+    console.log(array);
+    console.log(array2);
+  } catch (err) {
+    console.error(err.message);
+  }
+};
+
+const getCreditCard2 = async (req, res) => {
+  try {
+    const getJointAccount = await pool.query(
+      "SELECT credit_card_id_FK FROM joint WHERE user_id_FK = $1",
+      [currentUser]
+    );
+
+    let jointAccountLength = getJointAccount.rows.length;
+
+    let array = [];
+    let array2 = [];
+
+    for (let i = 0; i < jointAccountLength; i++) {
+      array[i] = getJointAccount.rows[i].credit_card_id_fk;
+    }
+
+    let arrString = array.toString();
+
+    console.log(arrString);
+
+    const getAllUserAccount = await pool.query(
+      "SELECT * FROM credit_card WHERE type_credit_card = 2 AND credit_card_id IN (" +
+        arrString +
+        ") "
+    );
+
+    res.json(getAllUserAccount.rows);
+    console.log(array);
+    console.log(array2);
+  } catch (err) {
+    console.error(err.message);
+  }
+};
+
+
+const decrementCreditCard = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { balance } = req.body;
+
+    const credit_card = await pool.query(
+      "SELECT * FROM credit_card WHERE credit_card_id = $1",
+      [id]
+    );
+
+    const newBal = credit_card.rows[0].debt - balance;
+
+    if (newBal < 0) {
+      return res.status(401).json({
+        error: {
+          message: "You Must Only Pay up to Amount Owed", //checks if password is incorrect and prints message
+        },
+      });
+    } else {
+      await pool.query(
+        "UPDATE credit_card SET debt = (debt - $1) WHERE credit_card_id = $2",
+        [balance, id]
+      );
+    }
+    res.json(credit_card.rows[0]);
+  } catch (err) {
+    console.error(err.message);
+  }
+};
+
 const updateSettings = async (req, res) => {
   try {
     const { username, email, passwd } = req.body;
 
-
-   
       await pool.query(
         "UPDATE users SET username = $1, email = $2, passwd = $3 WHERE user_id = $4",
         [username, email, passwd, currentUser]
@@ -289,12 +413,13 @@ const updateSettings = async (req, res) => {
 module.exports = {
   signup,
   login,
-  addCheckingAccount,
-  addSavingsAccount,
   getCheckingAccount,
   getSavingsAccount,
   incrementAccount,
   decrementAccount,
   updateSettings,
+  getCreditCard1,
+  getCreditCard2,
+  decrementCreditCard,
   pool,
 }; //export all modules
