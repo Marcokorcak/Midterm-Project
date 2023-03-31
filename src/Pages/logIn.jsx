@@ -73,17 +73,28 @@ const Login = () => {
               value={passwd}
             />
 
-            <div class="fill-button">
-              <button class="btn" onClick={userLogin}>
-                <p className="text-light font-weight-bold">Log In</p>
-              </button>
-              <button class="btn" onClick={routeChange}>
-                <p className="text-light font-weight-bold">Sign Up</p>
-              </button>
+              <div class="button" onClick={(e) => userLogin(e)} id="button-7">
+                <div id="dub-arrow">
+                  <img
+                    src="https://github.com/atloomer/atloomer.github.io/blob/master/img/iconmonstr-arrow-48-240.png?raw=true"
+                    alt=""
+                  />
+                </div>
+                <a href="#">Login</a>
+              </div>
+
+              <div class="button" onClick={routeChange} id="button-7">
+                <div id="dub-arrow">
+                  <img
+                    src="https://github.com/atloomer/atloomer.github.io/blob/master/img/iconmonstr-arrow-48-240.png?raw=true"
+                    alt=""
+                  />
+                </div>
+                <a href="#">Sign Up</a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
     </Container>
   );
 };

@@ -247,6 +247,8 @@ h1.a {
   margin-left: 50%;
   margin-bottom: 30%;
   transform: translate(-50%, -50%);
+  width: 50%;
+ 
 }
 
 .btn {
@@ -271,6 +273,7 @@ h1.a {
   transition: all 1s;
   margin: auto;
   margin-top: 55%;
+  
 }
 .btn {
   border: 3px solid red;
@@ -315,3 +318,122 @@ h1.a {
   color: white;
 }
 
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400');
+body {
+  background: #2D3142;
+  font-family: 'Raleway', sans-serif;
+}
+
+
+/* Heading */
+
+h1 {
+  font-size: 1.5em;
+  text-align: center;
+  padding: 70px 0 0 0;
+  color: #ffffff;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+span {
+  border: 2px solid #4F5D75;
+  padding: 10px;
+}
+
+
+/* Layout Styling */
+
+#container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 50px 0 150px 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+/* Button Styles */
+
+.button {
+  display: inline-flex;
+  height: 40px;
+  width: 150px;
+  border: 2px solid #BFC0C0;
+  margin: 20px 20px 20px 20px;
+  color: #BFC0C0;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: .8em;
+  letter-spacing: 1.5px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-left: 35%;
+
+}
+
+a {
+  color: #BFC0C0;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+
+
+
+
+/* Seventh Button */
+
+#button-7 {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  color: #fff; 
+}
+
+#button-7 a {
+  position: relative;
+  left: 0;
+  transition: all .35s ease-Out;
+  color: #fff;
+}
+
+#dub-arrow {
+  width: 100%;
+  height: 100%;
+  background: #BFC0C0;
+  left: -200px;
+  position: absolute;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .35s ease-Out;
+  bottom: 0;
+}
+
+#button-7 img {
+  width: 20px;
+  height: auto;
+}
+
+#button-7:hover #dub-arrow {
+  left: 0;
+}
+
+#button-7:hover a {
+  left: 150px;
+}
+
+@media screen and (min-width:1000px) {
+  h1 {
+    font-size: 2.2em;
+  }
+  #container {
+    width: 50%;
+  }
+}
