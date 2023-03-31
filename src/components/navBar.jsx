@@ -9,21 +9,21 @@ function NavBar() {
         <Navbar className="color-nav" fixed="top">
           <Container>
             <Nav className="me-auto">
-              <Nav.Link href="/logIn" className="text-light">
-                LogOut
-              </Nav.Link>
-              <Nav.Link href="/viewAccount" className="text-light">
-                Account
-              </Nav.Link>
-              <Nav.Link href="/viewCredit" className="text-light">
-                Credit
-              </Nav.Link>
-              <Nav.Link href="/transferMoney" className="text-light">
-                Transfer
-              </Nav.Link>
-              <Nav.Link href="/settings" className="text-light">
-                Settings
-              </Nav.Link>
+              <a href="/login" className="text-light \">
+                  LogOut
+                </a>
+              <a href="viewAccount" className="text-light \">
+                  Accounts
+                </a>
+              <a href="/viewCredit" className="text-light \">
+                  Credits
+                </a>
+              <a href="/transferMoney" className="text-light \">
+                  Transfer
+                </a>              
+              <a href="/settings" className="text-light \">
+                  Settings
+                </a>
             </Nav>
           </Container>
         </Navbar>
