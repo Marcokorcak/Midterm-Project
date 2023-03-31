@@ -6,13 +6,11 @@ import ViewAcc from "./Pages/viewAccount";
 import ViewCredit from "./Pages/viewCredit";
 import Signup from "./Pages/signup";
 import "./index.css";
-import NavBar from "./components/navBar";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (
     <div className="App">
-      <NavBar />
 
       <Router>
         <Routes>
@@ -29,11 +27,3 @@ function App() {
 }
 export default App;
 
-/*   <Route path="/logIn" element={<Login />}></Route>
-  <Route path="/viewAccount" element={<ViewAcc />}></Route>
-  <Route path="/viewCredit" element={<ViewCredit />}></Route>
-  <Route path="/makePayment" element={<MakePayment />}></Route>
-  <Route path="/transferMoney" element={<TransferMoney />}></Route>
-  <Route path="/settings" element={<Settings />}></Route>
-  <Route path="/checkingAcc" element={<CheckingAccount />}></Route>
-  <Route path="/savingsAcc" element={<SavingsAccount />}></Route> */

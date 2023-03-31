@@ -3,6 +3,7 @@ import logo from "../images/logo1.png";
 import React from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import NavBar1 from "../components/NavBar1";
 
 const Login = () => {
   const [username, setUsername] = useState("");
@@ -51,6 +52,7 @@ const Login = () => {
 
   return (
     <Container>
+      <NavBar1 />
       <div class="login">
         <div className="container_card_log_a">
           <div className="card-body">

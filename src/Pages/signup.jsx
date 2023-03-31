@@ -2,6 +2,7 @@ import Container from "../components/Container";
 import user from "../images/user.png";
 import React from 'react';
 import { useState } from "react";
+import NavBar1 from "../components/NavBar1";
 
 
 const Signup = () => {
@@ -116,6 +117,7 @@ const body = {username, email, passwd};
     };
 
     return (<Container>
+        <NavBar1 />
 
         <div className="container">
             <h1 className="text-light text-center m-t 40 a" >Signup</h1>

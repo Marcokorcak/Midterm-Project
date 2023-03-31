@@ -1,6 +1,8 @@
 import Container from "../components/Container";
 import React from 'react';
 import { useState, useEffect} from "react";
+import NavBar from "../components/navBar";
+
 
 
 
@@ -197,6 +199,7 @@ console.log(amtTransfer);
 
 
     return (<Container>
+        <NavBar />
        
        <div class="container">
             <h1 className = "text-light text-center m-t 40 a" >Transfer Money</h1>

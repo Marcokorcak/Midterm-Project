@@ -1,6 +1,8 @@
 import Container from "../components/Container";
 import { useState, useEffect } from "react";
 import { NavLink as RouterLink } from "react-router-dom";
+import NavBar from "../components/navBar";
+
 
 const ViewAcc = () => {
   const [savingsSearch, setSavingsSearch] = useState("");
@@ -154,6 +156,7 @@ const ViewAcc = () => {
 
   return (
     <Container>
+        <NavBar />
       <div class="container">
         <h1 className="text-light text-center m-t 40 a">Accounts</h1>
         <div class="row">

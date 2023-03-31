@@ -141,15 +141,15 @@ div.nav {
 }
 
 html {
-  background-color: #101357;
+  background-color:  rgb(6, 19, 51);
 }
 
 #root {
-  background-color: #101357;
+  background-image: linear-gradient(180deg, rgb(42, 61, 184), rgb(6, 19, 51));
 }
 
 .color-nav {
-  background-color: #232a98;
+  background-color: #0f0e0e;
 }
 
 .credit_input {
@@ -219,7 +219,7 @@ input.acc {
 }
 
 .container_card_log_a {
-  background-color: #232a98;
+  background-color: #1e1e22;
   border-radius: 30px;
   width: 500px;
   margin-left: 30%;
@@ -373,6 +373,7 @@ span {
   justify-content: center;
   overflow: hidden;
   margin-left: 35%;
+  margin-top: 7%;
 
 }
 

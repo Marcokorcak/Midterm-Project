@@ -3,6 +3,8 @@ import React from 'react';
 import card1 from "../images/card1.png";
 import card2 from "../images/card2.png";
 import { useState, useEffect } from "react";
+import NavBar from "../components/navBar";
+
 
 
 
@@ -127,6 +129,7 @@ const ViewCredit = () => {
   
 
     return (<Container>
+        <NavBar />
 
         <div class="container">
             <h1 className = "text-light text-center m-t 40 a" >Credit Cards</h1>
