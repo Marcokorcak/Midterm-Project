@@ -9,7 +9,7 @@ function NavBar1() {
         <Navbar className="color-nav" fixed="top">
           <Container>
             <Nav className="me-auto">
-                <a href="/login" className="text-light \">
+                <a href="/" className="text-light \">
                   Login
                 </a>
             </Nav>

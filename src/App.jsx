@@ -14,7 +14,7 @@ function App() {
 
       <Router>
         <Routes>
-          <Route exact path="/logIn" element={<Login />} />
+          <Route exact path="/" element={<Login />} />
           <Route exact path="/signup" element={<Signup />} />
           <Route exact path="/viewAccount" element={<ViewAcc />} />
           <Route exact path="/viewCredit" element={<ViewCredit />} />
