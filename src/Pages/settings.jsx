@@ -54,51 +54,49 @@ const Settings = () => {
     <Container>
       <NavBar />
 
-      <div className="container">
-        <h1 className="text-light text-center m-t 40 a">Profile Update</h1>
-        <div className="row">
-          <div className="col-lg-6 mb-4">
-            <div className="card_back">
-              <div className="container_card_set">
-                <div className="card-body">
-                  <div className="text-center">
-                    <img className="b" src={user}></img>
+      <h1 className="text-light text-center m-t 40 a">Profile Update</h1>
+      <br />
+      <br />
+      <div className="row">
+        <div className="col-lg-6 mb-4">
+          <div className="container_card_set">
+            <div className="card-body">
+              <div className="text-center">
+                <img className="b" src={user}></img>
 
-                    <p className="a"> Enter New User Information</p>
+                <p className="a"> Enter New User Information</p>
 
-                    <input
-                      className="set"
-                      name="userName"
-                      placeholder="User Name"
-                      value={username}
-                      onChange={usernameHandler}
-                    />
+                <input
+                  className="set"
+                  name="userName"
+                  placeholder="User Name"
+                  value={username}
+                  onChange={usernameHandler}
+                />
 
-                    <input
-                      className="set"
-                      name="email"
-                      placeholder="email"
-                      value={email}
-                      onChange={emailHandler}
-                    />
+                <input
+                  className="set"
+                  name="email"
+                  placeholder="email"
+                  value={email}
+                  onChange={emailHandler}
+                />
 
-                    <input
-                      className="set"
-                      name="password"
-                      placeholder="password"
-                      value={passwd}
-                      onChange={passwdHandler}
-                    />
+                <input
+                  className="set"
+                  name="password"
+                  placeholder="password"
+                  value={passwd}
+                  onChange={passwdHandler}
+                />
 
-                    <button
-                      className="x"
-                      type="submit"
-                      onClick={(e) => updateAccount(e)}
-                    >
-                      Update Info
-                    </button>
-                  </div>
-                </div>
+                <button
+                  className="x"
+                  type="submit"
+                  onClick={(e) => updateAccount(e)}
+                >
+                  Update Info
+                </button>
               </div>
             </div>
           </div>
