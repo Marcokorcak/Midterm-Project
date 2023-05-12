@@ -14,7 +14,7 @@ const Signup = () => {
     try {
       const body = { username, email, passwd };
 
-      const response = await fetch(`http://localhost:5000/users`, {
+      const response = await fetch(`https://mmjbank.herokuapp.com/users`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body),

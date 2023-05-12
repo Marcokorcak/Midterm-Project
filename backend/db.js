@@ -1,6 +1,6 @@
 const Pool = require("pg").Pool;
-const DATABASE_URL =
-  "postgres://shntrmdsghimku:b3ee73c97e5c43b1e59b59f11ad1c921b59f8027ada7b6d8b494b812409af47c@ec2-44-213-228-107.compute-1.amazonaws.com:5432/d8h6m4sjhe4gns";
+const DATABASE_URL = "postgres://shntrmdsghimku:b3ee73c97e5c43b1e59b59f11ad1c921b59f8027ada7b6d8b494b812409af47c@ec2-44-213-228-107.compute-1.amazonaws.com:5432/d8h6m4sjhe4gns";
+
 
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
@@ -12,6 +12,7 @@ const pool = new Pool({
   Host: "ec2-44-213-228-107.compute-1.amazonaws.com",
   Database: "d8h6m4sjhe4gns",
 });
+
 
 //let currentUser = 38; //placeholder variable for current user id
 
@@ -45,7 +46,7 @@ const signup = async (req, res) => {
       return res.status(400).json(errors);
     }
 
-    const newUserSignup = await pool.query(
+    const newUserSignup= await pool.query(
       "INSERT INTO users (username, email, passwd) VALUES ($1, $2, $3) RETURNING *", //inserts data into users table
       [username, email, passwd]
     );
@@ -55,10 +56,11 @@ const signup = async (req, res) => {
     const randNumRoutingSavings = Math.floor(100000 + Math.random() * 900000);
 
     const randNumAccountChecking = Math.floor(100000 + Math.random() * 900000);
-    const randNumRoutingChecking = Math.floor(100000 + Math.random() * 900000);
+    const randNumRoutingChecking= Math.floor(100000 + Math.random() * 900000);
 
     const randNumCreditCard1 = Math.floor(100000 + Math.random() * 900000);
     const randNumCreditCard2 = Math.floor(100000 + Math.random() * 900000);
+
 
     const balance = 1000;
     const debt1 = 100;
@@ -67,9 +69,12 @@ const signup = async (req, res) => {
     const credit_card_1 = 1;
     const credit_card_2 = 2;
 
+
+
     const account_number_savings = randNumAccountSavings;
     const routing_number_savings = randNumRoutingSavings;
     const type_account_savings = 2;
+
 
     const account_number_checking = randNumAccountChecking;
     const routing_number_checking = randNumRoutingChecking;
@@ -80,14 +85,10 @@ const signup = async (req, res) => {
 
     console.log(newUser);
 
+   
     const newSavingsAccount = await pool.query(
       "INSERT INTO account (balance, account_number, routing_number, type_account) VALUES($1, $2, $3, $4) RETURNING *",
-      [
-        balance,
-        account_number_savings,
-        routing_number_savings,
-        type_account_savings,
-      ]
+      [balance, account_number_savings, routing_number_savings, type_account_savings]
     );
 
     // const newJointSavingsAccount = await pool.query(
@@ -97,12 +98,7 @@ const signup = async (req, res) => {
 
     const newCheckingAccount = await pool.query(
       "INSERT INTO account (balance, account_number, routing_number, type_account) VALUES($1, $2, $3, $4) RETURNING *",
-      [
-        balance,
-        account_number_checking,
-        routing_number_checking,
-        type_account_checking,
-      ]
+      [balance, account_number_checking, routing_number_checking, type_account_checking]
     );
 
     // const newJointCheckingAccount = await pool.query(
@@ -117,11 +113,7 @@ const signup = async (req, res) => {
 
     const newJointCreditCard1 = await pool.query(
       "INSERT INTO joint (user_id_FK, account_id_FK, credit_card_id_FK) VALUES ($1, $2, $3)",
-      [
-        nextUser,
-        newCheckingAccount.rows[0].account_id,
-        newCreditCard1.rows[0].credit_card_id,
-      ]
+      [nextUser,newCheckingAccount.rows[0].account_id, newCreditCard1.rows[0].credit_card_id]
     );
 
     const newCreditCard2 = await pool.query(
@@ -131,13 +123,9 @@ const signup = async (req, res) => {
 
     const newJointCreditCard2 = await pool.query(
       "INSERT INTO joint (user_id_FK, account_id_FK, credit_card_id_FK) VALUES ($1, $2, $3)",
-      [
-        nextUser,
-        newSavingsAccount.rows[0].account_id,
-        newCreditCard2.rows[0].credit_card_id,
-      ]
+      [nextUser, newSavingsAccount.rows[0].account_id,newCreditCard2.rows[0].credit_card_id]
     );
-    // res.status(200).json({ success: true });
+   // res.status(200).json({ success: true });
 
     res.json({ sucess: true, data: newUser.rows[0] });
   } catch (err) {
@@ -164,7 +152,7 @@ const login = async (req, res) => {
     if (!(passwd === user.rows[0].passwd)) {
       return res.status(401).json({
         error: {
-          message: "Incorrect password", //checks if password is incorrect and prints message
+          message: "Incorrect password", //checks if password is incorrect and prints message 
         },
       });
     }
@@ -249,6 +237,9 @@ const getSavingsAccount = async (req, res) => {
   }
 };
 
+
+
+
 const incrementAccount = async (req, res) => {
   try {
     const { id } = req.params;
@@ -296,6 +287,7 @@ const decrementAccount = async (req, res) => {
     console.error(err.message);
   }
 };
+
 
 const getCreditCard1 = async (req, res) => {
   try {
@@ -365,6 +357,7 @@ const getCreditCard2 = async (req, res) => {
   }
 };
 
+
 const decrementCreditCard = async (req, res) => {
   try {
     const { id } = req.params;
@@ -399,12 +392,13 @@ const updateSettings = async (req, res) => {
   try {
     const { username, email, passwd } = req.body;
 
-    await pool.query(
-      "UPDATE users SET username = $1, email = $2, passwd = $3 WHERE user_id = $4",
-      [username, email, passwd, currentUser]
-    );
+      await pool.query(
+        "UPDATE users SET username = $1, email = $2, passwd = $3 WHERE user_id = $4",
+        [username, email, passwd, currentUser]
+      );
 
-    res.status(200).json({ success: true });
+      res.status(200).json({ success: true });
+    
   } catch (err) {
     console.error(err.message);
   }

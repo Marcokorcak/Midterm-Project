@@ -14,7 +14,7 @@ const Settings = () => {
     try {
       const body = { username, email, passwd };
 
-      const response = await fetch(`http://localhost:5000/accountUpdate`, {
+      const response = await fetch(`https://mmjbank.herokuapp.com/accountUpdate`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body),

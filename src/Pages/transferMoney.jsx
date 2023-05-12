@@ -14,7 +14,7 @@ const TransferMoney = () => {
 
   const getCheckingAccount = async () => {
     try {
-      const response = await fetch("http://localhost:5000/accountlistchecking");
+      const response = await fetch("https://mmjbank.herokuapp.com/accountlistchecking");
       const jsonData = await response.json();
 
       setCheckingAccount(jsonData);
@@ -26,7 +26,7 @@ const TransferMoney = () => {
 
   const getSavingsAccount = async () => {
     try {
-      const response = await fetch("http://localhost:5000/accountlistsavings");
+      const response = await fetch("https://mmjbank.herokuapp.com/accountlistsavings");
       const jsonData = await response.json();
 
       setSavingsAccount(jsonData);
@@ -48,7 +48,7 @@ const TransferMoney = () => {
 
       const body = { balance };
       const response = await fetch(
-        `http://localhost:5000/accountlistadd/${savingsAccount[0]?.account_id}`,
+        `https://mmjbank.herokuapp.com/accountlistadd/${savingsAccount[0]?.account_id}`,
 
         {
           method: "PUT",
@@ -68,7 +68,7 @@ const TransferMoney = () => {
       const balance = amtTransfer;
       const body = { balance };
       const response = await fetch(
-        `http://localhost:5000/accountlistadd/${checkingAccount[0]?.account_id}`,
+        `https://mmjbank.herokuapp.com/accountlistadd/${checkingAccount[0]?.account_id}`,
         {
           method: "PUT",
           headers: { "Content-Type": "application/json" },
@@ -89,7 +89,7 @@ const TransferMoney = () => {
 
       const body = { balance };
       const response = await fetch(
-        `http://localhost:5000/accountlistsubtract/${savingsAccount[0]?.account_id}`,
+        `https://mmjbank.herokuapp.com/accountlistsubtract/${savingsAccount[0]?.account_id}`,
         {
           method: "PUT",
           headers: { "Content-Type": "application/json" },
@@ -117,7 +117,7 @@ const TransferMoney = () => {
       const balance = amtTransfer;
       const body = { balance };
       const response = await fetch(
-        `http://localhost:5000/accountlistsubtract/${checkingAccount[0]?.account_id}`,
+        `https://mmjbank.herokuapp.com/accountlistsubtract/${checkingAccount[0]?.account_id}`,
         {
           method: "PUT",
           headers: { "Content-Type": "application/json" },
