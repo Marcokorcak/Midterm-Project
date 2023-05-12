@@ -158,7 +158,7 @@ const login = async (req, res) => {
     if (!(passwd === user.rows[0].passwd)) {
       return res.status(401).json({
         error: {
-          message: "Incorrect password", //checks if password is incorrect and prints message
+          message: "Incorrect password", //checks if password is incorrect and prints message 
         },
       });
     }
